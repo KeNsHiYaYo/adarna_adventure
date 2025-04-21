@@ -1519,8 +1519,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976470669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4084, y: 2.5356, z: 1.9194949}
-  m_LocalScale: {x: -3.7686753, y: 0.47314817, z: 0.068380944}
+  m_LocalPosition: {x: -9.53, y: 2.5356, z: 1.9194949}
+  m_LocalScale: {x: 18, y: 0.47314817, z: 0.068380944}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 924848647}
@@ -1932,8 +1932,8 @@ MonoBehaviour:
   balanceSpeed: 100
   balanceDrift: 20
   playerBody: {fileID: 288427763}
-  windMinForce: 35
-  windMaxForce: 40
+  windMinForce: 20
+  windMaxForce: 35
   gustDuration: 2
   timeBetweenGusts: 3
 --- !u!1 &1357357104
@@ -1963,8 +1963,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357357104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.18, y: 2.61, z: 0}
-  m_LocalScale: {x: 19.824507, y: 0.2, z: 19.75103}
+  m_LocalPosition: {x: -101.53, y: 2.61, z: 0}
+  m_LocalScale: {x: 10.302995, y: 0.2, z: 10.484834}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1796292826}
