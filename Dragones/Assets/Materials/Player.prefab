@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 4651627527685438070}
   - component: {fileID: 4651627527685438071}
   - component: {fileID: 4651627527685438059}
+  - component: {fileID: 713493274962347444}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -305,6 +306,19 @@ MonoBehaviour:
   windMaxForce: 35
   gustDuration: 2
   timeBetweenGusts: 3
+--- !u!114 &713493274962347444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4651627527685438068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab171819e2e10a44affdedbcf8a7ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastCheckpoint: {x: 0, y: 0, z: 0}
 --- !u!1 &4651627527853923764
 GameObject:
   m_ObjectHideFlags: 0
