@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BalanceBean
   - BalanceBeam
+  - Ring
+  - Dragon
   layers:
   - Default
   - TransparentFX
