@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 172197977}
   - component: {fileID: 172197976}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ring4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,7 @@ Transform:
   m_GameObject: {fileID: 172197974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 441932989}
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172197974}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
   m_Name: 
@@ -375,7 +375,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 441932989}
-  - component: {fileID: 441932988}
   m_Layer: 0
   m_Name: Ring_4
   m_TagString: Untagged
@@ -383,21 +382,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &441932988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441932987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextRing: {fileID: 0}
-  ringVisual: {fileID: 0}
-  isActive: 0
 --- !u!4 &441932989
 Transform:
   m_ObjectHideFlags: 0
@@ -405,14 +389,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441932987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.81, y: 7, z: 13.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.6, y: -1.8072004, z: -1.8329935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 172197975}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1506715212}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -619,7 +603,7 @@ GameObject:
   - component: {fileID: 1239783785}
   - component: {fileID: 1239783784}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ring3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 1239783782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 1.0115, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1264105634}
@@ -647,12 +631,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239783782}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextRing: {fileID: 0}
+  nextRing: {fileID: 172197976}
   ringVisual: {fileID: 0}
   isActive: 0
 --- !u!135 &1239783785
@@ -727,7 +711,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264105634}
-  - component: {fileID: 1264105633}
   m_Layer: 0
   m_Name: Ring_3
   m_TagString: Untagged
@@ -735,21 +718,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1264105633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264105632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextRing: {fileID: 441932988}
-  ringVisual: {fileID: 0}
-  isActive: 0
 --- !u!4 &1264105634
 Transform:
   m_ObjectHideFlags: 0
@@ -757,14 +725,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264105632}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.25, y: 7, z: 13.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.0499954, y: -1.8072004, z: -1.8329935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1239783783}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1506715212}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1274049861
 GameObject:
@@ -775,7 +743,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1274049863}
-  - component: {fileID: 1274049862}
   m_Layer: 0
   m_Name: Ring_1
   m_TagString: Untagged
@@ -783,21 +750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1274049862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274049861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextRing: {fileID: 1777837670}
-  ringVisual: {fileID: 0}
-  isActive: 1
 --- !u!4 &1274049863
 Transform:
   m_ObjectHideFlags: 0
@@ -805,14 +757,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274049861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.88, y: 7, z: 13.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -45.703495, y: -1.8072004, z: -1.8329935}
+  m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1458850948}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1506715212}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1306984146
 GameObject:
@@ -910,9 +862,9 @@ GameObject:
   - component: {fileID: 1458850952}
   - component: {fileID: 1458850951}
   - component: {fileID: 1458850950}
-  - component: {fileID: 1458850949}
+  - component: {fileID: 1458850953}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ring1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -933,21 +885,6 @@ Transform:
   m_Father: {fileID: 1274049863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1458850949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458850947}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextRing: {fileID: 1777837670}
-  ringVisual: {fileID: 0}
-  isActive: 0
 --- !u!135 &1458850950
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1011,6 +948,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1458850947}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1458850953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458850947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextRing: {fileID: 2137031227}
+  ringVisual: {fileID: 0}
+  isActive: 1
+--- !u!1 &1506715211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506715212}
+  m_Layer: 0
+  m_Name: Anillos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506715212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506715211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53.583496, y: 17.8, z: 15.732993}
+  m_LocalScale: {x: 1, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1274049863}
+  - {fileID: 1777837671}
+  - {fileID: 1264105634}
+  - {fileID: 441932989}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593756001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,7 +1137,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1777837671}
-  - component: {fileID: 1777837670}
   m_Layer: 0
   m_Name: Ring_2
   m_TagString: Untagged
@@ -1158,21 +1144,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1777837670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777837669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextRing: {fileID: 1264105633}
-  ringVisual: {fileID: 0}
-  isActive: 0
 --- !u!4 &1777837671
 Transform:
   m_ObjectHideFlags: 0
@@ -1180,14 +1151,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777837669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.32, y: 7, z: 13.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -26.089998, y: -1.8072004, z: -1.8329935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2137031222}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1506715212}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086384726
 GameObject:
@@ -1203,7 +1174,7 @@ GameObject:
   - component: {fileID: 2086384728}
   m_Layer: 0
   m_Name: Cuerpo
-  m_TagString: Untagged
+  m_TagString: Dragon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1394,9 +1365,9 @@ GameObject:
   - component: {fileID: 2137031226}
   - component: {fileID: 2137031225}
   - component: {fileID: 2137031224}
-  - component: {fileID: 2137031223}
+  - component: {fileID: 2137031227}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ring2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1411,27 +1382,12 @@ Transform:
   m_GameObject: {fileID: 2137031221}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1777837671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2137031223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137031221}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextRing: {fileID: 0}
-  ringVisual: {fileID: 0}
-  isActive: 0
 --- !u!135 &2137031224
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1495,3 +1451,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137031221}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2137031227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137031221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7716b2fcf7517ef4eade369acfe4bf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextRing: {fileID: 1239783784}
+  ringVisual: {fileID: 0}
+  isActive: 0
