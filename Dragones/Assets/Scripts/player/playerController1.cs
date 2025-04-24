@@ -10,6 +10,9 @@ public class playerController1 : MonoBehaviour
     public float normalSpeed;
     public float slowSpeed = 2f;
 
+    //Variable para la animacion
+    public Animator animator;
+
     //Variables para el balanceo en el Parapeto
     public float balance = 0f;
     public float balanceThreshold = 30f;
@@ -35,6 +38,7 @@ public class playerController1 : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        animator=GetComponent<Animator>();
         movementSpeed = normalSpeed;
     }
 
@@ -111,9 +115,24 @@ public class playerController1 : MonoBehaviour
             playerBody.localRotation = Quaternion.Euler(0f, 0f, balance);
         }
 
+        if (animator != null)
+        {
+            bool isMoving = hor != 0 || ver != 0;
+
+            if (isOnBeam)
+            {
+                animator.SetBool("isMovingOnBeam", isMoving);
+            }
+            else
+            {
+                animator.SetBool("isMovingOnBeam", false);
+            }
+        }
+
+
     }
 
-     void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("BalanceBeam"))
         {
