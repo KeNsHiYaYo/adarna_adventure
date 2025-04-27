@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RingTrigger : MonoBehaviour
 {
@@ -43,8 +44,14 @@ public class RingTrigger : MonoBehaviour
             else
             {
                 Debug.Log("¡Todos los anillos completados!");
+                LoadNextScene();
                 // Aquí puedes lanzar evento de victoria, animación, etc.
             }
         }
+    }
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene("final");
     }
 }
