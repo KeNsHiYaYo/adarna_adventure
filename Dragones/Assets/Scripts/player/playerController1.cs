@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class playerController1 : MonoBehaviour
 {
-    //Variables para el movimiento del player
-    private new Rigidbody rigidbody; 
+    private new Rigidbody rigidbody;
     public float movementSpeed;
     public float normalSpeed;
     public float slowSpeed = 2f;
 
-    //Variable para la animacion
     public Animator animator;
 
-    //Variables para el balanceo en el Parapeto
     public float balance = 0f;
     public float balanceThreshold = 30f;
     public float balanceSpeed = 20f;
     public float balanceDrift = 5f;
     public Transform playerBody;
-    private bool isOnBeam = false; // Activar/desactivar la mecanica
+    private bool isOnBeam = false;
 
-    // Variables para el viento
     public float windMinForce = 5f;
     public float windMaxForce = 15f;
     public float gustDuration = 2f;
@@ -33,36 +29,43 @@ public class playerController1 : MonoBehaviour
     private float currentWindDirection = 0f;
     private bool windIsBlowing = false;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        animator=GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         movementSpeed = normalSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float hor = Input.GetAxisRaw("Horizontal");
         float ver = Input.GetAxisRaw("Vertical");
 
-        Vector3 velocity = Vector3.zero;
-        if (hor !=0 || ver != 0)
+        bool isMoving = hor != 0 || ver != 0;
+
+        if (isMoving)
         {
             Vector3 direction = (transform.forward * ver + transform.right * hor).normalized;
-            velocity = direction * movementSpeed;
+            Vector3 moveVelocity = direction * movementSpeed;
+            moveVelocity.y = rigidbody.velocity.y;
+            rigidbody.velocity = moveVelocity;
         }
-        velocity.y = rigidbody.velocity.y;
-        rigidbody.velocity = velocity;
+        else
+        {
+            Vector3 stopVelocity = new Vector3(0, rigidbody.velocity.y, 0);
+            rigidbody.velocity = stopVelocity;
+        }
+
+        if (animator != null)
+        {
+            animator.SetBool("isMoving", isMoving);
+            animator.SetBool("isBalancing", isOnBeam);
+        }
 
         if (isOnBeam)
         {
-            // Inestabilidad natural
             balance += Random.Range(-balanceDrift, balanceDrift) * Time.deltaTime;
 
-            // Ráfagas de viento con efecto visual y físico
             if (!windIsBlowing)
             {
                 windTimer += Time.deltaTime;
@@ -70,19 +73,13 @@ public class playerController1 : MonoBehaviour
                 {
                     windIsBlowing = true;
                     gustTimer = 0f;
-
-                    // Dirección aleatoria: -1 (izquierda) o 1 (derecha)
                     currentWindDirection = Random.Range(0, 2) == 0 ? -1f : 1f;
-
-                    // Fuerza aleatoria
                     currentWindForce = Random.Range(windMinForce, windMaxForce);
                 }
             }
             else
             {
                 gustTimer += Time.deltaTime;
-
-                //Efecto físico: empuja al jugador lateralmente
                 Vector3 windPush = transform.right * currentWindDirection * currentWindForce * 0.5f;
                 rigidbody.AddForce(windPush, ForceMode.Force);
 
@@ -93,43 +90,21 @@ public class playerController1 : MonoBehaviour
                 }
             }
 
-
-            // Corrección con input
             float horizontalInput = Input.GetAxis("Horizontal");
             balance -= horizontalInput * balanceSpeed * Time.deltaTime;
-
-            // Rotación visual (opcional)
             playerBody.localRotation = Quaternion.Euler(0f, 0f, balance);
 
-            // Si se cae...
             if (Mathf.Abs(balance) > balanceThreshold)
             {
                 Debug.Log("¡Perdiste el equilibrio!");
-                // Aquí podrías reiniciar la escena, reproducir animación, etc.
+                // Podrías reiniciar la escena aquí
             }
         }
         else
         {
-            // Resetear balance al volver al suelo
             balance = Mathf.Lerp(balance, 0f, Time.deltaTime * 5f);
             playerBody.localRotation = Quaternion.Euler(0f, 0f, balance);
         }
-
-        if (animator != null)
-        {
-            bool isMoving = hor != 0 || ver != 0;
-
-            if (isOnBeam)
-            {
-                animator.SetBool("isMovingOnBeam", isMoving);
-            }
-            else
-            {
-                animator.SetBool("isMovingOnBeam", false);
-            }
-        }
-
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -150,3 +125,4 @@ public class playerController1 : MonoBehaviour
         }
     }
 }
+
